@@ -19,12 +19,22 @@ Module ScrapeFunctions
         ' Return the source string
         Return ResponseText
     End Function
-    Function InsatiateUser(Username As String, Password As String)
+    Function AddAuthHeader(Request As HttpWebRequest, Username As String, Password As String) As HttpWebRequest
+        ' Concatenate the username and password with a ":" and convert to Bytes
+        Dim AuthInfo As String = Username + ":" + Password
+        Dim AuthBytes As Byte() = System.Text.Encoding.UTF8.GetBytes(AuthInfo)
+        ' Convert the Bytes to a Base64 string
+        AuthInfo = Convert.ToBase64String(AuthBytes)
+        ' Add the string to the Authorization header of the request
+        Request.Headers("Authorization") = "Basic " + AuthInfo
+        ' Return the Authenticated request instance
+        Return Request
+    End Function
+    Function InsatiateUser(Username As String, Password As String) As String
         ' Create a request instance with the main loreto URL
         Request = HttpWebRequest.Create(LoretoURLs("main"))
-        ' Set user authentication and enable default authentication
-        Request.Credentials = New NetworkCredential(Username, Password)
-        Request.UseDefaultCredentials = True
+        ' Add the user authentication using Base64
+        Request = AddAuthHeader(Request, Username, Password)
         ' Return the response source text
         Return ReadResponse(Request.GetResponse())
     End Function
