@@ -38,6 +38,16 @@ Module ScrapeFunctions
         ' Return the response source text
         Return ReadResponse(Request.GetResponse())
     End Function
+    Function CheckCredentials(Username As String, Password As String) As Boolean
+        Try
+            ' Try to get the Response with those credentials
+            InsatiateUser(Username, Password)
+            Return True
+        Catch ex As System.Net.WebException When ex.Message.Contains("401")
+            ' Only catch the exception if it is a 401
+            Return False
+        End Try
+    End Function
     Function ParseImage(SourceText As String) As Image
         ' Declare Regex pattern and make matches
         Dim Pattern As String = """studentPhotoShielded"" src=""data: image/jpeg;base64,(.*)"">"
