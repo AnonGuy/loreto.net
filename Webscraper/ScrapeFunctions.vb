@@ -48,13 +48,18 @@ Module ScrapeFunctions
             Return False
         End Try
     End Function
+    Function RegexMatch(Pattern As String, Input As String) As String
+        ' Declare Regex pattern while ignoring character case
+        Dim R As Regex = New Regex(Pattern, RegexOptions.IgnoreCase)
+        ' Declare Match object and return Group 1
+        Dim M As Match = R.Match(Input)
+        Return M.Groups(1).Value
+    End Function
     Function ParseImage(SourceText As String) As Image
         ' Declare Regex pattern and make matches
         Dim Pattern As String = """studentPhotoShielded"" src=""data: image/jpeg;base64,(.*)"">"
-        Dim R As Regex = New Regex(Pattern, RegexOptions.IgnoreCase)
-        Dim M As Match = R.Match(SourceText)
         ' Get the Base64 portion of the HTML tag
-        Dim Avatar64 = M.Groups(1).Value
+        Dim Avatar64 = RegexMatch(Pattern, SourceText)
         ' Convert the Base64 string into a MemoryStream
         Dim Bytes() As Byte = Convert.FromBase64String(Avatar64)
         Dim Stream As New System.IO.MemoryStream(Bytes)
@@ -64,18 +69,23 @@ Module ScrapeFunctions
 End Module
 
 Public Class User
-    ' Pairs of name to source text
+    ' Pairs of friendly names to source HTML
     Public sources As New Dictionary(Of String, String) From {
         {"main", Nothing}
     }
     ' User Avatar Image
     Public Avatar As Image
-    ' User Authentication
+    ' Full Name of User
+    Public Name(2) As String
     Dim Authentication(2) As String
+    Dim ID As Integer
     Sub New(Username As String, Password As String)
         ' Declare user attributes
         Me.Authentication = {Username, Password}
-        Me.sources("main") = InsatiateUser(Username, Password)
-        Me.Avatar = ParseImage(Me.sources("main"))
+        Dim Soup As String = InsatiateUser(Username, Password)
+        Me.sources("main") = Soup
+        Me.Avatar = ParseImage(Soup)
+        Me.Name = RegexMatch("fullName: ""(.*)""", Soup).Split(" ")
+        Me.ID = CInt(RegexMatch("thisUserId = ""(.*)""", Soup))
     End Sub
 End Class

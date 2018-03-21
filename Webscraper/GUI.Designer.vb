@@ -23,59 +23,101 @@ Partial Class GUI
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.AvatarBox = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.StudentName = New System.Windows.Forms.Label()
         Me.DummyBox = New System.Windows.Forms.PictureBox()
+        Me.TimetableBox = New System.Windows.Forms.DataGridView()
+        Me.Time = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Lesson = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Room = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.AvatarBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DummyBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TimetableBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AvatarBox
         '
-        Me.AvatarBox.Location = New System.Drawing.Point(12, 12)
+        Me.AvatarBox.Location = New System.Drawing.Point(22, 20)
         Me.AvatarBox.Name = "AvatarBox"
         Me.AvatarBox.Size = New System.Drawing.Size(137, 167)
         Me.AvatarBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.AvatarBox.TabIndex = 0
         Me.AvatarBox.TabStop = False
         '
-        'Label1
+        'StudentName
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(29, 182)
-        Me.Label1.Name = "Label1"
-        Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label1.Size = New System.Drawing.Size(107, 18)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Jeremiah Boby"
+        Me.StudentName.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.StudentName.AutoSize = True
+        Me.StudentName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StudentName.Location = New System.Drawing.Point(26, 195)
+        Me.StudentName.Name = "StudentName"
+        Me.StudentName.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.StudentName.Size = New System.Drawing.Size(127, 20)
+        Me.StudentName.TabIndex = 1
+        Me.StudentName.Text = "Jeremiah Boby"
+        Me.StudentName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'DummyBox
         '
-        Me.DummyBox.Location = New System.Drawing.Point(12, 12)
+        Me.DummyBox.Location = New System.Drawing.Point(22, 20)
         Me.DummyBox.Name = "DummyBox"
         Me.DummyBox.Size = New System.Drawing.Size(137, 167)
         Me.DummyBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.DummyBox.TabIndex = 2
         Me.DummyBox.TabStop = False
         '
+        'TimetableBox
+        '
+        Me.TimetableBox.BackgroundColor = System.Drawing.SystemColors.Menu
+        Me.TimetableBox.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TimetableBox.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Time, Me.Lesson, Me.Room})
+        Me.TimetableBox.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.TimetableBox.Location = New System.Drawing.Point(181, 20)
+        Me.TimetableBox.Name = "TimetableBox"
+        Me.TimetableBox.RowHeadersVisible = False
+        Me.TimetableBox.RowHeadersWidth = 5
+        Me.TimetableBox.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.TimetableBox.Size = New System.Drawing.Size(303, 201)
+        Me.TimetableBox.TabIndex = 3
+        '
+        'Time
+        '
+        Me.Time.HeaderText = "Time"
+        Me.Time.Name = "Time"
+        '
+        'Lesson
+        '
+        Me.Lesson.HeaderText = "Lesson"
+        Me.Lesson.Name = "Lesson"
+        '
+        'Room
+        '
+        Me.Room.HeaderText = "Room"
+        Me.Room.Name = "Room"
+        '
         'GUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(521, 315)
+        Me.ClientSize = New System.Drawing.Size(499, 236)
+        Me.Controls.Add(Me.TimetableBox)
         Me.Controls.Add(Me.DummyBox)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.StudentName)
         Me.Controls.Add(Me.AvatarBox)
         Me.Name = "GUI"
         Me.Text = "GUI"
         CType(Me.AvatarBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DummyBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TimetableBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents AvatarBox As PictureBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents StudentName As Label
     Friend WithEvents DummyBox As PictureBox
+    Friend WithEvents TimetableBox As DataGridView
+    Friend WithEvents Time As DataGridViewTextBoxColumn
+    Friend WithEvents Lesson As DataGridViewTextBoxColumn
+    Friend WithEvents Room As DataGridViewTextBoxColumn
 End Class

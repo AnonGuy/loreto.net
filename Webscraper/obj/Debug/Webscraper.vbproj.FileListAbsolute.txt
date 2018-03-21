@@ -25,3 +25,17 @@
 \\file-home4\JerBob17$\Downloads\loreto.net-master\loreto.net-master\Webscraper\obj\Debug\Webscraper.exe
 \\file-home4\JerBob17$\Downloads\loreto.net-master\loreto.net-master\Webscraper\obj\Debug\Webscraper.xml
 \\file-home4\JerBob17$\Downloads\loreto.net-master\loreto.net-master\Webscraper\obj\Debug\Webscraper.pdb
+N:\Desktop\Repos\loreto.net\Webscraper\bin\Debug\Webscraper.exe.config
+N:\Desktop\Repos\loreto.net\Webscraper\bin\Debug\Webscraper.exe
+N:\Desktop\Repos\loreto.net\Webscraper\bin\Debug\Webscraper.pdb
+N:\Desktop\Repos\loreto.net\Webscraper\bin\Debug\Webscraper.xml
+N:\Desktop\Repos\loreto.net\Webscraper\bin\Debug\Microsoft.mshtml.dll
+N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.vbprojResolveAssemblyReference.cache
+N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.GUI.resources
+N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.Login.resources
+N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.Resources.resources
+N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.vbproj.GenerateResource.Cache
+N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.vbproj.CoreCompileInputs.cache
+N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.exe
+N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.xml
+N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.pdb
