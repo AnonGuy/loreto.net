@@ -1,1 +1,4 @@
-theme: jekyll-theme-slate
+theme: jekyll-theme-cayman
+title: Loreto.NET Manager
+description: A faster, friendlier Loreto service
+show_downloads: true
