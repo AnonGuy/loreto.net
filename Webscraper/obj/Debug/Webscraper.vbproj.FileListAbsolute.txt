@@ -39,3 +39,17 @@ N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.vbproj.CoreCompileIn
 N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.exe
 N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.xml
 N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.pdb
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\bin\Debug\Webscraper.exe.config
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\bin\Debug\Webscraper.exe
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\bin\Debug\Webscraper.pdb
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\bin\Debug\Webscraper.xml
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\bin\Debug\Microsoft.mshtml.dll
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.vbprojResolveAssemblyReference.cache
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.GUI.resources
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.Login.resources
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.Resources.resources
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.vbproj.GenerateResource.Cache
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.vbproj.CoreCompileInputs.cache
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.exe
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.xml
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.pdb

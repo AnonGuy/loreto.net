@@ -22,6 +22,7 @@ Partial Class GUI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI))
         Me.AvatarBox = New System.Windows.Forms.PictureBox()
         Me.StudentName = New System.Windows.Forms.Label()
         Me.DummyBox = New System.Windows.Forms.PictureBox()
@@ -103,6 +104,7 @@ Partial Class GUI
         Me.Controls.Add(Me.DummyBox)
         Me.Controls.Add(Me.StudentName)
         Me.Controls.Add(Me.AvatarBox)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "GUI"
         Me.Text = "GUI"
         CType(Me.AvatarBox, System.ComponentModel.ISupportInitialize).EndInit()

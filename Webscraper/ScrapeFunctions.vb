@@ -3,8 +3,9 @@ Imports System.Net
 Imports System.Text.RegularExpressions
 Module ScrapeFunctions
     ' URLs for various use-cases
-    Dim LoretoURLs As New Dictionary(Of String, String) From {
-        {"main", "https://my.loreto.ac.uk/"}
+    Public LoretoURLs As New Dictionary(Of String, String) From {
+        {"main", "https://my.loreto.ac.uk/"},
+        {"timetable", "https://my.loreto.ac.uk/attendance/timetable/studentWeek"}
     }
     ' Temporary Response and Request objects
     Dim Response As WebResponse
@@ -77,15 +78,21 @@ Public Class User
     Public Avatar As Image
     ' Full Name of User
     Public Name(2) As String
+    ' {Username, Password}
     Dim Authentication(2) As String
+    ' Loreto User ID
     Dim ID As Integer
     Sub New(Username As String, Password As String)
         ' Declare user attributes
         Me.Authentication = {Username, Password}
+        ' HTML Source of the homepage
         Dim Soup As String = InsatiateUser(Username, Password)
         Me.sources("main") = Soup
+        ' Get Avatar Image object from the source base64
         Me.Avatar = ParseImage(Soup)
+        ' Get the user's full name
         Me.Name = RegexMatch("fullName: ""(.*)""", Soup).Split(" ")
+        ' Get the Loreto UserID from the source
         Me.ID = CInt(RegexMatch("thisUserId = ""(.*)""", Soup))
     End Sub
 End Class

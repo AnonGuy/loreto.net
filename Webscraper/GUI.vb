@@ -4,7 +4,7 @@
         DummyBox.Image = My.Resources.DummyImage
         AvatarBox.Image = UserObject.Avatar
         StudentName.Text = Join(UserObject.Name, " ")
-        For Each Row In GetTimetable(UserObject)
+        For Each Row In GetShortTimetable(UserObject)
             TimetableBox.Rows.Add(Row)
         Next
         MsgBox("Welcome, " & UserObject.Name(0) & "!")
@@ -20,5 +20,9 @@
     Private Sub AvatarBox_Click(sender As Object, e As EventArgs) Handles AvatarBox.Click
         AvatarBox.Visible = False
         DummyBox.Visible = True
+    End Sub
+
+    Private Sub GUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

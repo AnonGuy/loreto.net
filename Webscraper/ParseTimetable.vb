@@ -19,7 +19,7 @@ Module ParseTimetable
             Patterns(Pattern) = R.Matches(UserObject.sources("main"))
         Next
     End Sub
-    Function GetTimetable(UserObject As User) As String()()
+    Function GetShortTimetable(UserObject As User) As String()()
         Dim Timetable As New List(Of String())
         ' Set the Dictionary Pattern Collections
         GetMatches(UserObject)
@@ -28,16 +28,22 @@ Module ParseTimetable
         ' Go through the Lesson Matches and add to Timetable
         For Row As Integer = 0 To LessonCount - 1
             ' Time, Room, Lesson Match Values for each Lesson
+            Dim LessonName() As String = Patterns(
+                Patterns.Keys(1))(Row).Groups(1).Value.Replace(
+                   "GCE A Level ", ""
+            ).Split("-")
             Timetable.Add(
                 {
                 Patterns(Patterns.Keys(0))(Row).Groups(1).Value,
-                Patterns(Patterns.Keys(1))(Row).Groups(1).Value.Replace(
-                   "GCE A Level ", ""
-                ).Split(" -")(0),
+                LessonName(LessonName.Length - 2).Trim(),
                 Patterns(Patterns.Keys(2))(Row).Groups(1).Value
                 }
             )
         Next
         Return Timetable.ToArray
+    End Function
+    Function GetFullTimetable(UserObject As User) As String()()
+        Dim Timetable As New List(Of String())
+        Return Nothing
     End Function
 End Module
