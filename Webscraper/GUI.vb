@@ -21,8 +21,4 @@
         AvatarBox.Visible = False
         DummyBox.Visible = True
     End Sub
-
-    Private Sub GUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
