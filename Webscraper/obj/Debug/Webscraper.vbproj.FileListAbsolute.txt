@@ -53,3 +53,4 @@ N:\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.pdb
 \\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.exe
 \\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.xml
 \\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.pdb
+\\file-home4\JerBob17$\Desktop\Repos\loreto.net\Webscraper\obj\Debug\Webscraper.TimetableGUI.resources

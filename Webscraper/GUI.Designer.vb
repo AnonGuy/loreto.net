@@ -30,6 +30,7 @@ Partial Class GUI
         Me.Time = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Lesson = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Room = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimetableButton = New System.Windows.Forms.Button()
         CType(Me.AvatarBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DummyBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TimetableBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,7 +78,7 @@ Partial Class GUI
         Me.TimetableBox.RowHeadersVisible = False
         Me.TimetableBox.RowHeadersWidth = 5
         Me.TimetableBox.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.TimetableBox.Size = New System.Drawing.Size(303, 201)
+        Me.TimetableBox.Size = New System.Drawing.Size(303, 167)
         Me.TimetableBox.TabIndex = 3
         '
         'Time
@@ -95,11 +96,21 @@ Partial Class GUI
         Me.Room.HeaderText = "Room"
         Me.Room.Name = "Room"
         '
+        'TimetableButton
+        '
+        Me.TimetableButton.Location = New System.Drawing.Point(183, 194)
+        Me.TimetableButton.Name = "TimetableButton"
+        Me.TimetableButton.Size = New System.Drawing.Size(301, 23)
+        Me.TimetableButton.TabIndex = 4
+        Me.TimetableButton.Text = "Full Timetable"
+        Me.TimetableButton.UseVisualStyleBackColor = True
+        '
         'GUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(499, 236)
+        Me.Controls.Add(Me.TimetableButton)
         Me.Controls.Add(Me.TimetableBox)
         Me.Controls.Add(Me.DummyBox)
         Me.Controls.Add(Me.StudentName)
@@ -122,4 +133,5 @@ Partial Class GUI
     Friend WithEvents Time As DataGridViewTextBoxColumn
     Friend WithEvents Lesson As DataGridViewTextBoxColumn
     Friend WithEvents Room As DataGridViewTextBoxColumn
+    Friend WithEvents TimetableButton As Button
 End Class

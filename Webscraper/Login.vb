@@ -1,4 +1,5 @@
-﻿Public Class Login
+﻿Imports System.Net
+Public Class Login
     Sub PostData()
         If CheckCredentials(UsernameBox.Text, PasswordBox.Text) Then
             Dim user = New User(UsernameBox.Text, PasswordBox.Text)

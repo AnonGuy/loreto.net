@@ -26,12 +26,13 @@ Partial Class Login
         Me.LoginButton = New System.Windows.Forms.Button()
         Me.UsernameBox = New System.Windows.Forms.TextBox()
         Me.PasswordBox = New System.Windows.Forms.TextBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'LoginButton
         '
         Me.LoginButton.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LoginButton.Location = New System.Drawing.Point(60, 108)
+        Me.LoginButton.Location = New System.Drawing.Point(17, 108)
         Me.LoginButton.Name = "LoginButton"
         Me.LoginButton.Size = New System.Drawing.Size(89, 32)
         Me.LoginButton.TabIndex = 0
@@ -55,11 +56,22 @@ Partial Class Login
         Me.PasswordBox.Size = New System.Drawing.Size(180, 26)
         Me.PasswordBox.TabIndex = 2
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(114, 117)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(82, 17)
+        Me.CheckBox1.TabIndex = 3
+        Me.CheckBox1.Text = "Use Default"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(206, 153)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.PasswordBox)
         Me.Controls.Add(Me.UsernameBox)
         Me.Controls.Add(Me.LoginButton)
@@ -74,4 +86,5 @@ Partial Class Login
     Friend WithEvents LoginButton As Button
     Friend WithEvents UsernameBox As TextBox
     Friend WithEvents PasswordBox As TextBox
+    Friend WithEvents CheckBox1 As CheckBox
 End Class
